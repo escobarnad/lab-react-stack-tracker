@@ -17,7 +17,7 @@ function CompanyPage({ companies }) {
       {company.techStack.map((tech) => {
         return (
           <ul key={tech.slug}>
-            <Link to={`/tech/${tech.slug}`}>
+            <Link to={`/tech/${tech.slug}?q=${company.slug}`}>
               <img src={tech.image} alt={`${tech.name} logo`} height={"70px"} />
               <li>{tech.name}</li>
             </Link>
