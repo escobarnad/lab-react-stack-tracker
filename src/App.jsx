@@ -19,7 +19,7 @@ function App() {
           path="/company/:companySlug"
           element={<CompanyPage companies={companies} />}
         />
-        <Route path="/tech/:slug" element={<TechnologyPage />} />
+        <Route path="/tech/:slug" element={<TechnologyPage tech={tech} />} />
         <Route path="*" element={<h1>404 Page Not Found</h1>} />
       </Routes>
     </div>
