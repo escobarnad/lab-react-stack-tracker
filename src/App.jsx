@@ -14,9 +14,13 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/companie/:companySlug" element={<CompanyPage />} />
+        <Route path="/" element={<HomePage companies={companies} />} />
+        <Route
+          path="/company/:companySlug"
+          element={<CompanyPage companies={companies} />}
+        />
         <Route path="/tech/:slug" element={<TechnologyPage />} />
+        <Route path="*" element={<h1>404 Page Not Found</h1>} />
       </Routes>
     </div>
   );
